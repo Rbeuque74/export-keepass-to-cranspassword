@@ -10,11 +10,13 @@ do
     do
         test=1;
     done
-    echo $x
+    #echo $x
 
-    for DD in `find . -type f`
+    for DD in `find ./$x -type f`
     do
         value=`cat $DD`
+	#echo "bin/passwords/"
+	echo $x
         echo "$value" | ~/bin/aurorepasswords --roles aurore -f -e $x
     done
 done
